@@ -22,12 +22,14 @@ public class SpringSecurity {
     public static  PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+    
 
 
 
 @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
+        // .cors().configurationSource(corsConfigurationSource()).and()
             .csrf(csrf -> csrf.disable()) // Assume this is still valid; adjust if necessary
             .authorizeHttpRequests(authz -> authz
             
