@@ -30,6 +30,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User findById(long id) {
+        return userRepository.findById(id).get();
+    }
+
+    @Override
     public void saveUser(UserDto userDto) {
         User user = new User();
         System.out.println("here------------------");

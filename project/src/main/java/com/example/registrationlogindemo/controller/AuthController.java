@@ -131,6 +131,7 @@ public class AuthController {
         }
 
         response.put("role", user.getRole().getName());
+        response.put("id", user.getId());
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 

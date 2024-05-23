@@ -1,7 +1,6 @@
 package com.example.registrationlogindemo.controller;
 
 import com.example.Serializer;
-import com.example.registrationlogindemo.dto.ChangePasswordDto;
 import com.example.registrationlogindemo.dto.LoginDto;
 import com.example.registrationlogindemo.dto.UserApprovalDto;
 import com.example.registrationlogindemo.dto.UserDto;
@@ -9,11 +8,8 @@ import com.example.registrationlogindemo.entity.User;
 import com.example.registrationlogindemo.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 
 // import org.springframework.stereotype.Controller;
 
@@ -73,13 +69,13 @@ public class AdminController {
     public ResponseEntity<?> approveUser(@RequestBody UserApprovalDto userApprovalDto) {
         // endpoint to approve a user
         User user = userService.findByUsername(userApprovalDto.getUsername());
-        Map<String, String> response = new HashMap<>();
+        Map<String, Object> response = new HashMap<>();
         response.put("message", "User not found");
         if (user != null) {
             user.setRoleApproved(true);
             userService.approveUser(user);
             response = new HashMap<>();
-            response.put("message", "User approved successfully");
+            response.put("success", true);
             return new ResponseEntity<>(response, HttpStatus.OK);
         }
 

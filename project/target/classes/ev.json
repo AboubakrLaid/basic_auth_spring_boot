@@ -1,0 +1,30 @@
+[
+    {
+      "name": "POSTGRESQL_ADDON_DB",
+      "value": "bmmbet2mfe4m3hxefiev"
+    },
+    {
+      "name": "POSTGRESQL_ADDON_HOST",
+      "value": "bmmbet2mfe4m3hxefiev-postgresql.services.clever-cloud.com"
+    },
+    {
+      "name": "POSTGRESQL_ADDON_PASSWORD",
+      "value": "yaiRhlpHfgjmaUIrgboNWY6HEE3fzx"
+    },
+    {
+      "name": "POSTGRESQL_ADDON_PORT",
+      "value": "50013"
+    },
+    {
+      "name": "POSTGRESQL_ADDON_URI",
+      "value": "postgresql://ue4k7vmumcy9kw5gzgdq:yaiRhlpHfgjmaUIrgboNWY6HEE3fzx@bmmbet2mfe4m3hxefiev-postgresql.services.clever-cloud.com:50013/bmmbet2mfe4m3hxefiev"
+    },
+    {
+      "name": "POSTGRESQL_ADDON_USER",
+      "value": "ue4k7vmumcy9kw5gzgdq"
+    },
+    {
+      "name": "POSTGRESQL_ADDON_VERSION",
+      "value": "15"
+    }
+  ]

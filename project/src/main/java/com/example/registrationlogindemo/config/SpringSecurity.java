@@ -33,6 +33,8 @@ public class SpringSecurity {
 
                         .requestMatchers("/api/**").permitAll()
                         .requestMatchers("/api/users/**").hasAuthority("ADMIN")
+                        .requestMatchers("/api/articles/**").hasAuthority("SUPPLIER")
+                        .requestMatchers("/api/orders/**").permitAll()
                         .anyRequest().authenticated())
                 // .httpBasic() // Adjusted for hypothetical new method
                 .logout(logout -> logout
